@@ -11,7 +11,9 @@ Router.map(function() {
     this.route('listado', function() {
       this.route('detalle');
     });
-    this.route('alta');
+    this.route('alta', function() {
+      this.route('confirmacion');
+    });
   });
 });
 
