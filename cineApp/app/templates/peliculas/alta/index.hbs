@@ -1,1 +1,25 @@
-{{outlet}}
+<h2>Alta de peliculas</h2>
+
+<p>
+  Título: {{input value=model.title}}
+</p>
+<p>
+  Director: {{input value=model.director}}
+</p>
+<p>
+  Para todos los públicos: {{input type="checkbox" checked=model.allAudiences}}
+</p>
+<p>
+  Año: {{input value=model.year}}
+</p>
+<p>
+  Género: {{input value=model.genre}}
+</p>
+<p>
+  URL de la carátula: {{input value=model.url}}
+</p>
+<p>
+  Descripción: {{textarea value=model.description}}
+</p>
+
+<button {{action 'guardar'}}>Guardar</button>
