@@ -13,7 +13,13 @@
   Año: {{input value=model.year}}
 </p>
 <p>
-  Género: {{input value=model.genre}}
+  Género:
+  <select onchange={{action (mut model.genre) value="target.value"}}>
+    <option disabled selected value></option>
+    {{#each generos as |genre|}}
+      <option value={{genre}} selected={{eq model.genre genre}}>{{genre}}</option>
+    {{/each}}
+  </select>
 </p>
 <p>
   URL de la carátula: {{input value=model.url}}
