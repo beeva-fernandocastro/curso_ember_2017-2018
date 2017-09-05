@@ -1,0 +1,7 @@
+.pelicula { width: 410px;height:200px;position:relative;margin-bottom:10px; }
+.imagen_pelicula { float: left; width:200px;display:block; }
+.info_pelicula { float: right;width:200px;margin-left:10px; }
+.info_pelicula_margen { padding-bottom:8px; }
+.info_pelicula_ancho { width:600px; }
+.center { text-align: center; display:block; }
+ul{ list-style:none; }

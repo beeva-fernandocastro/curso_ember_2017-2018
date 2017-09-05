@@ -8,6 +8,9 @@ export default Ember.Controller.extend({
     guardar() {
       this.get('peliculasController').get('model').push(this.get('model'));
       this.transitionToRoute('peliculas.alta.confirmacion');
+    },
+    volver() {
+      this.transitionToRoute('peliculas.index');
     }
   }
 });

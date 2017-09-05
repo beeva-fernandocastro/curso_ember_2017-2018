@@ -1,1 +1,26 @@
-{{outlet}}
+<h2>Listado de peliculas</h2>
+
+<div>
+  {{log model}}
+  <ul>
+    {{#each model as |pelicula|}}
+      <li class="pelicula">
+        <div class="imagen_pelicula">
+            {{#link-to "peliculas.listado.detalle" pelicula.id}}
+              <img src={{pelicula.url}} alt="{{pelicula.title}}" height="200" width="200">
+            {{/link-to}}
+        </div>
+        <div class="info_pelicula">
+            <div class="info_pelicula_margen"><b>Título</b> {{pelicula.title}}</div>
+            <div class="info_pelicula_margen"><b>Director</b> {{pelicula.director}}</div>
+            <div class="info_pelicula_margen"><b>Género</b> {{pelicula.genre}}</div>
+            <div><b>Año</b> {{pelicula.year}}</div>
+        </div>
+      </li>
+    {{else}}
+      Lo lamento, no hay películas que mostrar
+    {{/each}}
+  </ul>
+</div>
+
+<button {{action 'volver'}}>Volver</button>
