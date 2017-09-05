@@ -2,7 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return [
+
+    /*return [
       {
         title: 'Terminator',
         director: 'James Cameron',
@@ -21,6 +22,8 @@ export default Ember.Route.extend({
         description: 'werwerewrewrwrwrer',
         url: 'http://www.fotogramas.es/var/ezflow_site/storage/images/cinefilia/titanic-y-otras-catorce-peliculas-que-cumplen-20-anos/127659013-1-esl-ES/Titanic-y-otras-catorce-peliculas-que-cumplen-20-anos_reference.jpg'
       }
-    ]
+    ]*/
+
+    return this.get('store').findAll('pelicula');
   }
 });
