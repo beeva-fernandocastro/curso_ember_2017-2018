@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+const { Controller } = Ember;
+
+export default Controller.extend({
   generos: ["Accion", "Ciencia ficcion", "Terror"],
 
   actions: {
@@ -8,6 +10,7 @@ export default Ember.Controller.extend({
       this.store.createRecord('pelicula', this.get('model'));
       this.transitionToRoute('peliculas.alta.confirmacion');
     },
+
     volver() {
       this.transitionToRoute('peliculas.index');
     }

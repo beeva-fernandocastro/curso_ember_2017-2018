@@ -10,7 +10,7 @@ Router.map(function() {
   this.route('peliculas', function() {
     this.route('listado', function() {
       this.route('detalle', {
-        path: ':id'
+        path: '/detalle/:id'
       });
     });
     this.route('alta', function() {
